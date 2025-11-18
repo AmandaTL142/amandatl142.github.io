@@ -3,38 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min Simple Forside</title>
+    <title>Amanda Laursen - CV</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>Velkommen til Min Hjemmeside 👋</h1>
-        <p>Dette er en simpel forside lavet i HTML.</p>
+    <header class="header">
+        <img src="portræt.jpg" alt="Portræt af Amanda Laursen" class="profile-image">
+        
+        <div class="header-content">
+            <h1>Amanda Laursen</h1>
+            <p class="subtitle">Datateknikerelev med speciale i programmering</p>
+        </div>
     </header>
 
-    <hr>
+    <main class="container">
+        <section id="contact" class="contact-info">
+            <h2>Kontakt</h2>
+            <ul>
+                <li><strong>Email:</strong> amla11@elev.tec.dk</li>
+                <li><strong>Telefon:</strong> +45 22 11 78 38</li>
+                <li><strong>Lokation:</strong> Hothers Plads 15, 2200 København N</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>Om Denne Side</h2>
-        <p>Denne side er et basalt eksempel for at vise den grundlæggende struktur af et HTML-dokument. Den indeholder et header-område, en sektion til indhold og en footer.</p>
-    </section>
+        <section id="profile" class="section">
+            <h2>Profil & Mål</h2>
+            <p>Jeg er en engageret og nysgerrig datateknikerelev med speciale i programmering.
+                Gennem min uddannelse og tidligere erfaring fra datamatikerstudiet har jeg opbygget
+                en solid forståelse for softwareudvikling og problemløsning.
+                Jeg har en analytisk tilgang til opgaver og motiveres af at lære nyt og udvikle mine kompetencer.
+                Gennem mit studiejob som studentermedhjælper er jeg vant til at arbejde i et professionelt miljø,
+                hvor jeg tager ansvar og bidrager til samarbejdet med en positiv og løsningsorienteret tilgang.
+                Jeg søger en læreplads, hvor jeg kan omsætte teori til praksis og bidrage til udviklingen af robuste løsninger.</p>
+        </section>
 
-    <hr>
+        <section id="skills" class="section">
+            <h2>Tekniske Færdigheder</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programmering & Markup</h3>
+                    <p>Java (erfaren, start 2021)<br>C# (godt kendskab)<br>JavaScript (grundlæggende)<br>VBA (grundlæggende)<br>HTML (øvet)<br>CSS (øvet)</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks, Værktøjer & Databaser</h3>
+                    <p>Thymeleaf<br>.NET Core<br>MySQL<br>Git/GitHub (Versionsstyring)<br>JUnit (enhedstests)<br>IntelliJ IDEA<br>
+                        Visual Studio</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Metoder & Koncepter</h3>
+                    <p>Objektorienteret programmering<br>Agil udvikling (Scrum)<br>Waterfall, Pair programming<br>Stand-up meetings
+                        <br>AI (ChatGPT, Gemini, Copilot, GitHub Copilot)</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience" class="section">
+            <h2>Arbejdserfaring</h2>
+            
+            <article class="job-entry">
+                <h3>Studentermedhjælper</h3>
+                <p class="meta">Københavns Professionshøjskole | 2022 – nu</p>
+                <p>Arbejder i et professionelt miljø, tager ansvar og bidrager til samarbejdet.</p>
+            </article>
 
-    <section>
-        <h2>Hvad Du Kan Gøre</h2>
-        <ul>
-            <li>Erstat al tekst med dit eget indhold.</li>
-            <li>Tilføj billeder ved hjælp af `<img>` tagget.</li>
-            <li>Tilføj links til andre sider med `<a>` tagget.</li>
-            <li>Tilføj CSS for at gøre siden flottere!</li>
-        </ul>
-    </section>
+            <article class="job-entry">
+                <h3>Guide</h3>
+                <p class="meta">Netto-Bådene A/S | 2016 – 2021</p>
+                <p>Arbejdede fuld tid i perioder.</p>
+            </article>
 
-    <hr>
+            <article class="job-entry">
+                <h3>Hjemmehjælper</h3>
+                <p class="meta">Gentofte Kommune | 2015 – 2019</p>
+                <p>Arbejdede under studier i weekender og ferier og senere fuld tid.</p>
+            </article>
 
-    <footer>
-        <p>&copy; 2025 Din Navn/Virksomhed</p>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Uddannelse</h2>
+            
+            <article class="job-entry">
+                <h3>Datatekniker (Speciale: Programmering)</h3>
+                <p class="meta">TEC - Data og Kommunikation | 2025 – nu</p>
+                <ul>
+                    <li>GF2 afsluttet d. 10. oktober 2025</li>
+                    <li>Elevrådsrepræsentant</li>
+                </ul>
+            </article>
+
+            <article class="job-entry">
+                <h3>Datamatiker</h3>
+                <p class="meta">KEA | 2021 – 2023</p>
+                <ul>
+                    <li>2 semestre gennemført</li>
+                    <li>Opbygget solid forståelse for softwareudvikling og problemløsning.</li>
+                </ul>
+            </article>
+            
+            <article class="job-entry">
+                <h3>Molekylær Biomedicin</h3>
+                <p class="meta">Københavns Universitet | 2014 – 2016</p>
+                <ul>
+                    <li>4 semestre gennemført</li>
+                </ul>
+            </article>
+
+            <article class="job-entry">
+                <h3>STX (Gymnasium)</h3>
+                <p class="meta">Svendborg Gymnasium og HF | 2010 – 2013</p>
+                <ul>
+                    <li>Studieretning: Bioteknologi A, Fysik A og Matematik A</li>
+                </ul>
+            </article>
+            
+        </section>
+
+
+        <section id="languages" class="section">
+            <h2>Sprog</h2>
+            <ul>
+                <li><strong>Dansk:</strong> Modersmål</li>
+                <li><strong>Engelsk:</strong> Flydende i skrift og tale</li>
+                <li><strong>Tysk:</strong> Basalt</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>CV-opdatering: November 2025</p>
     </footer>
 
 </body>

@@ -1,0 +1,202 @@
+/* Grundlæggende Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Farvevariabler for nem tilpasning */
+:root {
+    --primary-color: #273F59; /* Mørkeblå */
+    --secondary-color: #495057; /* Tekstfarve */
+    --background-color: #F8F9FA; /* Lys baggrund */
+    --section-bg-color: #FFFFFF; /* Hvid baggrund for sektioner */
+    --border-color: #DEE2E6; /* Let grå kant */
+    --font-family: Arial, Helvetica, sans-serif; /* Systemsikre skrifttyper (fjernet ekstern henvisning) */
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+}
+
+/* Header Styling - TILPASSET FOR BILLEDPLADS PÅ DESKTOP */
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    position: relative; /* Gør headeren til reference for profilbilledet */
+    padding: 40px 180px 40px 20px; /* Skaber plads til billedet i højre side (180px padding) */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.8em;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.header .subtitle {
+    font-size: 1.2em;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Styling og positionering af profilbillede */
+.profile-image {
+    position: absolute; /* Placer billedet frit */
+    top: 50%; /* Starter billedet midt i headeren (lodret) */
+    right: 20px; /* 20px fra højre kant */
+    transform: translateY(-50%); /* Centrerer lodret */
+    
+    width: 150px !important; /* FAST STØRRELSE TIL BILLEDET */
+    height: 150px !important; 
+    
+    object-fit: cover; /* Sikrer, at billedet udfylder området */
+    border-radius: 50%; /* Gør billedet rundt */
+    border: 5px solid white; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    display: block;
+}
+
+/* Main Container */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Sektioner og Overskrifter */
+.section {
+    background-color: var(--section-bg-color);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--primary-color); /* Farvet stribe for visuel effekt */
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 700;
+}
+
+h3 {
+    color: var(--secondary-color);
+    font-size: 1.3em;
+    margin-top: 0;
+    font-weight: 500;
+}
+
+/* Kontaktinformation */
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 30px; /* Fleksibel afstand mellem elementer */
+}
+
+.contact-info li {
+    flex: 1 1 200px; /* Fleksibilitet for at sikre 2 kolonner på større skærme */
+}
+
+/* Erfaring/Uddannelse Entries */
+.job-entry {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 2px solid var(--border-color);
+}
+
+.job-entry .meta {
+    font-style: italic;
+    color: #6c757d;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.job-entry ul {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+/* Færdigheder (Skills) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Gitterstruktur */
+    gap: 20px;
+}
+
+.skill-category {
+    background-color: var(--background-color);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.skill-category p {
+    margin-top: 5px;
+    font-size: 0.95em;
+}
+
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 0.85em;
+    color: #6c757d;
+}
+
+/* Responsivitet for mobil/mindre skærme */
+@media (max-width: 600px) {
+    /* Header justeret til mobil */
+    .header {
+        /* Øger bunden af headeren for at give plads til billedet under teksten */
+        padding: 20px 20px 100px 20px; 
+    }
+    
+    .header h1 {
+        font-size: 2.2em;
+    }
+
+    .header .subtitle {
+        font-size: 1em;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    
+    .section {
+        padding: 20px;
+    }
+
+    /* Stak kontaktinformation lodret på mobil */
+    .contact-info ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Billede justering for mobilskærme */
+    .profile-image {
+        /* Flyt billedet til bunden og centrer det i stedet for i højre hjørne */
+        position: absolute;
+        top: auto;
+        bottom: 10px; 
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%); /* Centrerer vandret */
+        width: 100px !important; /* Mindre størrelse på mobil */
+        height: 100px !important;
+        border: 3px solid white;
+    }
+}
